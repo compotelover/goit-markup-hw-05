@@ -495,10 +495,14 @@ button {
     border: 1px solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding-left: 16px;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
 }
 
 .form-input::placeholder {
-    color: #FFF;
+    color: #ffffff;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-style: normal;
@@ -514,6 +518,8 @@ button {
     height: 40px;
     border-radius: 4px;
     border: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-frame {
@@ -530,6 +536,7 @@ button {
     background-color: rgba(46, 47, 66, 0.40);
     z-index: 9999;
     display: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .is-open {
@@ -544,6 +551,9 @@ button {
     background-color: #FCFCFC;
     border-radius: 4px;
     padding: 72px 24px 24px 24px;
+    min-height: 584px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-button {
@@ -558,12 +568,14 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0;
 }
 
 .close-button:hover,
-.close-button:active {
+.close-button:focus {
     background-color: #404BBF;
+    border: none;
 }
 
 .close {
@@ -571,9 +583,9 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:active,
+.close-button:focus,
 .close-button:hover .close {
-    fill: #FFFFFF;
+    fill: #ffffff;
 }
 
 .modal-container {
