@@ -583,7 +583,7 @@ button {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-button:focus > .close
+.close-button:focus > .close,
 .close-button:hover > .close {
     fill: #ffffff;
 }
@@ -604,7 +604,6 @@ button {
 
 .modal-input-container {
     position: relative;
-    margin-top: 4px;
 }
 
 .modal-input {
@@ -613,12 +612,13 @@ button {
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding-left: 38px;
+    background-color: transparent;
     outline: 0px solid transparent;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
-    border: 1px solid #4D5AE5;
+    border-color: #4D5AE5;
 }
 
 .svg-modal {
@@ -683,15 +683,21 @@ button {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.48px;
+    display: block;
+    margin-bottom: 4px;
 }
 
 .label-policy {
 }
 
+.text-area-container {
+    margin-bottom: 16px;
+}
+
 .modal-container-policy {
-    margin-top: 16px;
+    margin-bottom: 24px;
 }
 
 .link-privacy {
